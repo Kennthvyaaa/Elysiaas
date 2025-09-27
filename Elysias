@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Cute Portfolio</title>
+  <style>
+    /* General resets */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-image: url('https://i.pinimg.com/736x/40/5e/8d/405e8d6d16e4975a4aec980b1922e1dc.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+    }
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+    }
+
+    nav {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 15px;
+      z-index: 10;
+    }
+
+    nav a {
+      text-decoration: none;
+      background: #ffc0cb;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    nav a:hover {
+      transform: translateY(-5px);
+    }
+
+    article, aside {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      backdrop-filter: blur(5px);
+    }
+
+    article {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .pfp {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ffc0cb;
+      margin: 0 auto;
+    }
+
+    .biodata {
+      text-align: center;
+    }
+
+    .biodata h1 {
+      font-size: 2rem;
+      color: #ff69b4;
+      margin-bottom: 10px;
+    }
+
+    .biodata p {
+      font-size: 1rem;
+    }
+
+    .moodboards {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .moodboards img {
+      width: 32%;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .moodboards img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Cute music player */
+    .music-player {
+      margin-top: 20px;
+      background: #ffc0cb;
+      border-radius: 50px;
+      padding: 15px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .player-btn {
+      background: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+      color: #ff69b4;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .player-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .track-name {
+      font-weight: bold;
+      color: white;
+      margin-left: 15px;
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    aside {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    aside h2 {
+      color: #ff69b4;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #ffc0cb;
+      padding-bottom: 5px;
+    }
+
+    aside .column {
+      background: #fff0f5;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+    }
+
+    aside ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    aside ul li {
+      padding: 5px 0;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .moodboards {
+        flex-direction: column;
+      }
+
+      .moodboards img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="https://bit.ly/elystagram">Instagram</a>
+    <a href="https://www.tumblr.com/elysiaheirinee">Tumblr</a>
+    <a href="https://open.spotify.com/user/31nbqffqabjyrxawqx2rik6llaxq">Spotify</a>
+    <a href="https://bit.ly/46nNvqy">WhatsApp</a>
+  </nav>
+
+  <div class="container">
+    <!-- Article / Biodata -->
+    <article>
+      <img src="https://i.pinimg.com/736x/2b/e3/df/2be3dff4ba18d8cc4fd4c05cc99d7067.jpg" alt="Profile Picture" class="pfp">
+      <div class="biodata">
+        <h1>ELYSIA</h1>
+        <p>Hi! I'm a creative soul who loves pink, art, music, and dreamy aesthetics. This is my personal profile where you can find my dislike, likes, interests, and more!</p>
+      </div>
+
+      <div class="moodboards">
+        <img src="https://i.pinimg.com/736x/c5/f7/7d/c5f77d930b44bf2cd3eca31125599b3f.jpg" alt="Moodboard 1">
+        <img src="https://i.pinimg.com/736x/42/44/49/42444949de304d8208e9cf63ecd27ae3.jpg" alt="Moodboard 2">
+        <img src="https://i.pinimg.com/736x/0d/44/65/0d4465a65fb0d8ffbb4c92acb0718964.jpg" alt="Moodboard 3">
+      </div>
+
+      <!-- Cute Music Player -->
+      <div class="music-player">
+        <span class="track-name">I AM - Ive</span>
+        <button class="player-btn" id="playBtn">▶️</button>
+        <!-- Added proper audio controls -->
+        <audio id="audio" src="file:///C:/Users/Nadhifa%20Zalfaa%20I/Documents/EONYY/I%20AM.mp3"></audio>
+      </div>
+    </article>
+
+    <!-- Aside / Interests -->
+    <aside>
+      <div class="column">
+        <h2>Likes</h2>
+        <ul>
+          <li>Anime & Manga</li>
+          <li>Music & Singing</li>
+          <li>Pink Aesthetics</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h2>Dislikes</h2>
+        <ul>
+          <li>Problematic people</li>
+          <li>Spicy Food</li>
+          <li>People who takes jokes overly serious</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h2>BFY / DFI / DNI</h2>
+        <ul>
+          <li>BFY: I'm a slow responder but I'll make sure to respond ASAP. Usually a snap/WhatsApp spammer since I'm a trainer typa roleplayer</li>
+          <li>DFI: Don’t follow if you take life too seriously, don’t like cats, don't like salty/sarcasm</li>
+          <li>DNI: HOMOPHOBIC, HARSH WORD, PROBLEMATIC, GHOSTING, DRY TEXTER, CONVO KILLER</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h2>Interests</h2>
+        <ul>
+          <li>Anime, Manga, Music, & Video Games</li>
+          <li>Editing, Programming, & Drawing</li>
+          <li>Mathematics, Science, & JFashion</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    const playBtn = document.getElementById('playBtn');
+    const audio = document.getElementById('audio');
+
+    playBtn.addEventListener('click', () => {
+      if(audio.paused){
+        audio.play();
+        playBtn.textContent = "⏸️";
+      } else {
+        audio.pause();
+        playBtn.textContent = "▶️";
+      }
+    });
+  </script>
+</body>
+</html>
